@@ -20,7 +20,6 @@ def read_args():
     parser = argparse.ArgumentParser()
     # Training our model
     parser.add_argument('-project', type=str, default='openstack', help='name of the dataset')
-    parser.add_argument('-save_dir', type=str, default='./snapshot')
 
     # Training our model
     parser.add_argument('-train', action='store_true', help='training attention model')
