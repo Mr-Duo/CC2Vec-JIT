@@ -10,8 +10,7 @@ def train_model(data, params):
     code_loader, pad_msg_labels, _, dict_code = data
     
     params.save_dir = os.path.join(params.save_dir, params.project)
-    if not os.path.exists(params.save_dir):
-        os.mkdir(params.save_dir)
+    
     params.vocab_code = len(dict_code)
     if len(pad_msg_labels.shape) == 1:
         params.class_num = 1
