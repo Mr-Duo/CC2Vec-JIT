@@ -9,6 +9,8 @@ def train_model(data, params):
 
     params.filter_sizes = [int(k) for k in params.filter_sizes.split(',')]
     params.save_dir = os.path.join(params.save_dir, params.project)
+    if not os.path.exists(params.save_dir):
+        os.mkdir(params.save_dir)
     params.vocab_msg, params.vocab_code = len(dict_msg), len(dict_code)
     params.embedding_ftr = cc2ftr.shape[1]
     params.class_num = 1
